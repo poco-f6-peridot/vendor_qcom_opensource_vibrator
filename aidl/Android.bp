@@ -5,6 +5,7 @@ cc_library_shared {
     name: "vendor.qti.hardware.vibrator.impl",
     defaults: ["qti_vibrator_hal_defaults"],
     vendor: true,
+    cflags: Common_CFlags,
     srcs: [
         "Vibrator.cpp",
         "VibratorOffload.cpp",
@@ -23,6 +24,7 @@ cc_library_shared {
 cc_binary {
     name: "vendor.qti.hardware.vibrator.service",
     vendor: true,
+    cflags: Common_CFlags,
     relative_install_path: "hw",
     init_rc: ["vendor.qti.hardware.vibrator.service.rc"],
     vintf_fragments: [
